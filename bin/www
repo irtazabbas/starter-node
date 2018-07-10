@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+require('./overwrites');
+require('./extensions');
+
+const cluster = require('cluster');
+const os = require('os');
+const config = require('config');
+
+const noOfCores = os.cpus().length;
+
+
+if (config.forkChildren && cluster.isMaster) {
+  console.info(`[Master] Total cores: ${noOfCores}`);
+
+  [...Array(noOfCores)].forEach(() => cluster.fork());
+} else {
+  require('./server');
+}

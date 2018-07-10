@@ -1,0 +1,33 @@
+{
+  "name": "starter-node",
+  "version": "1.0.0",
+  "description": "Starter project for NodeJS, ExpressJS, and Sequelize(for SQL based dbs)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irtazabbas/starter-node.git"
+  },
+  "author": "Irtaza Abbas",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "cache-flex": "^1.0.2",
+    "colors": "^1.2.5",
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "http-errors-promise": "^1.6.0",
+    "jsonwebtoken": "^8.2.2",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
