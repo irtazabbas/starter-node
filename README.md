@@ -13,9 +13,9 @@ This is a starter/template/bootstrap code for NodeJS based back-end.
 ## Out of the box features
 - Basic user signup (encrypted password using hash and salt).
 - Login, with signed [json web tokens](https://www.npmjs.com/package/jsonwebtoken).
-- Roles based access control (*in progress*).
 - Bearer authentication middlewares using [passport](https://www.npmjs.com/package/passport).
 - Third party authentication for google, facebook (*in progress*).
+- Roles based access control (*in progress*).
 - Multi-tenant support (based on configurable subdomain settings).
 
 
