@@ -2,7 +2,7 @@
 This is a starter/template/bootstrap code for NodeJS based back-end.
 
 ## Why?
-- To save time *and*:
+ To save time *and*:
   - have a strong application structure
   - have separation of concern
   - have modularity
@@ -14,9 +14,10 @@ This is a starter/template/bootstrap code for NodeJS based back-end.
 - Basic user signup (encrypted password using hash and salt).
 - Login, with signed [json web tokens](https://www.npmjs.com/package/jsonwebtoken).
 - Bearer authentication middlewares using [passport](https://www.npmjs.com/package/passport).
-- Third party authentication for google, facebook (*in progress*).
+- PostgreSQL support using [Sequelize](https://www.npmjs.com/package/sequelize).
+- Support for multiple environments i.e. *development*, *staging* and *production* using [config](https://www.npmjs.com/package/config).
+- Third party authentication for google, facebook using [passport](https://www.npmjs.com/package/passport) (*in progress*).
 - Roles based access control (*in progress*).
-- Multiple SQL based databases support using [Sequelize](https://www.npmjs.com/package/sequelize) (*in progress*).
 - Multi-tenant support (based on configurable subdomain settings).
 
 
