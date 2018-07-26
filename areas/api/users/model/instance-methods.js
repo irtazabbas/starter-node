@@ -1,7 +1,7 @@
 
 const error = require('http-errors-promise');
 
-const authHelpers = require('../../authorization/helpers/crypto');
+const authHelpers = require('../../../authorization/helpers/crypto');
 
 
 module.exports = {

@@ -1,8 +1,8 @@
 
 const models = require('../../../database').models;
-const UserModel = require('./model');
+const UserModel = require('./');
 
-// Model definitions can go here
+// Model assoication definitions can go here
 /*
   ....UserModel.belongsTo(models.SomeModel)
 */

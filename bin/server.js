@@ -24,7 +24,7 @@ server.on('listening', onListening);
 /**
  * Connecting to database
  */
-require('../database');
+require('../areas/database');
 
 /**
  * Normalize a port into a number, string, or false.

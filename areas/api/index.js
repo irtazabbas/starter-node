@@ -2,7 +2,7 @@
  * @fileOverview Exports all API entities' (modules/resources) model and router
  */
 
-const sequelize = require('../../database');
+const sequelize = require('../database');
 const config = require('config');
 
 const entities = {};
@@ -10,10 +10,22 @@ const entities = {};
 [
   'users'
 ].forEach(e => {
-  entities[e] = {
-    model: require(`./${e}/model`),
-    router: require(`./${e}/routes`)
+  let model, router;
+  try {
+    model = require(`./${e}/model`);
+  } catch (err) {
+    console.error(`Error including ${e} model`);
+    throw err;
   }
+
+  try {
+    router = require(`./${e}/routes`);
+  } catch (err) {
+    // ignoring if router does not exist
+    if (err.code !== 'MODULE_NOT_FOUND') console.log(err);
+  }
+
+  entities[e] = { model, router };
 });
 
 /**

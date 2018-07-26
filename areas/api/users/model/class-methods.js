@@ -3,10 +3,10 @@ const error = require('http-errors-promise');
 const crypto = require('crypto');
 
 // full relative path to authorization helper methods to avoid circular reference
-const authHelpers = require('../../authorization/helpers/crypto');
-const authTokenHelpers = require('../../authorization/helpers/token');
+const authHelpers = require('../../../authorization/helpers/crypto');
+const authTokenHelpers = require('../../../authorization/helpers/token');
 const check = require('../../../services/validation');
-const CON = require('./constants');
+const CON = require('../constants');
 const ERR = CON.ERRORS;
 
 module.exports = {
@@ -41,8 +41,8 @@ module.exports = {
 
         return user.checkPassword(params.password)
           .then(() => ({
-            user,
-            token: authTokenHelpers.signTokenSync(user)
+            token: authTokenHelpers.signTokenSync(user),
+            user
           }))
           .catch(err => error(err, ERR.INVALID_CREDENTIALS));
       });

@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 const config = require('config');
 
-const CON = require('./constants');
+const CON = require('../constants');
 const sequelize = require('../../../database');
 
 const UserModel = sequelize.define(
